@@ -1,9 +1,7 @@
 import java.io.*;
-import java.nio.Buffer;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
-import java.util.Scanner;
+
 
 /**
  * Class that is used to perform Huffman compression on files
@@ -14,15 +12,14 @@ import java.util.Scanner;
 public class HuffmanSubmit implements Huffman
 {
 
-    // Feel free to add more methods and variables as required.
+
     private final int REQUIRED_LENGTH_OF_BINARY_STRING = 8;
     public static void main(String[] args)
     {
         Huffman  huffman = new HuffmanSubmit();
         huffman.encode("alice30.txt", "alice.enc", "freq.txt");
         huffman.decode("alice.enc", "alice30_dec.txt", "freq.txt");
-        // After decoding, both ur.jpg and ur_dec.jpg should be the same.
-        // On linux and mac, you can use `diff' command to check if they are the same.
+
     }
 
 
